@@ -1,0 +1,104 @@
+#!/usr/bin/env perl
+
+=rem
+Утилита, которая принимает входной поток, разбивает его на колонки по разделителю `TAB` и вырезает из него заданные (`man cut`)
+
+Обязательные параметры:
+
+- `-f` - "fields" - выбрать поля (колонки)
+- `-d` - "delimiter" - использовать другой разделитель
+
+Опционально:
+
+* `-s` - "separated" - выводить только строки с разделителем
+
+Пример:
+```sh
+$ echo -ne "1\t2\t3\n4\t5\t6\n7\t8\t9\n"
+1   2   3
+4   5   6
+7   8   9
+
+$ echo -ne "1\t2\t3\n4\t5\t6\n7\t8\t9\n" | cut -f 2,3
+2   3
+5   6
+8   9
+
+$ echo -ne "1:2:3\n4:5:6\n7:8:9\n" | cut -f 3 -d:
+3
+6
+9
+```
+=cut
+
+use 5.016;
+use warnings;
+use utf8;
+use open qw(:utf8 :std);
+use Getopt::Long;
+
+Getopt::Long::Configure("bundling");
+
+# читаем стандартный ввод
+my @line;
+while (<STDIN>) {
+	chomp;	# отсекаем \n
+	push @line, $_;
+}
+
+# если входной поток пуст то и делать ничего не будем
+die "Ожидается входной поток" unless (@line);
+
+# Читаем параметры
+my $param_f = '';
+my $param_d = "\t";	# Разделитель по умолчанию
+my $flag_s = '';
+GetOptions (
+	'f=s', \$param_f,
+	'd=s', \$param_d,
+	's', \$flag_s,
+);
+
+# проверяем опцию -f
+my @f_list = map {/(\d+)/g} $param_f;
+die "Вы должны задать список полей" unless (@f_list);
+# Забираем только уникальные колонки и сортируем их
+{
+	my %uniq;
+	@f_list = grep { !$uniq{$_}++ } @f_list;
+}
+@f_list = sort {$a <=> $b} @f_list;
+
+# проверяем опцию -d
+# если не одиночный разделитель:
+die "Разделитель должен быть одним символом" if (length($param_d) > 1);
+# если передали пустой разделитель до делаем нужное и выходим
+if ($param_d eq "") {
+	# если передали параметр -s не выводим ничего
+	unless ($flag_s) {
+		foreach (@line) {
+			say $_;
+		}
+		exit;
+	}
+	# если не передали параметр -s то выводим все
+	else {
+		exit;
+	}
+}
+
+# обрабатываем опцию -s
+if ($flag_s) {
+	@line = grep {/(.*$param_d.*)/} @line;
+}
+
+# Обрабатываем опцию -f
+foreach (@line) {
+	my @strings = /([^$param_d]+)$param_d?/g;
+	foreach (@f_list) {
+		last unless defined $strings[$_-1];
+		print $strings[$_-1];
+		print "$param_d" unless($f_list[@f_list-1] == $_ or $strings[@strings-1] eq $strings[$_-1]);
+	}
+	print "\n";
+}

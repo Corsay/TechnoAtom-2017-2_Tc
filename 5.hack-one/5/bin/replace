@@ -1,0 +1,43 @@
+#!/usr/bin/env perl
+=rem
+Необходимо написать утилиту, которая реализует замену строк входящего потока на определённый шаблон.
+
+Обязательные параметры:
+
+- `-p|--pattern=X` - регулярное выражения с захватами, которое выбирает нужные данные из строки
+- `-r|--replace=X` - шаблон в который превращается входящая строка с плейсхолдерами $\d
+
+Пример:
+```
+$ cat data
+aaa   :a0e7f64b:bbb:Bla bla bla
+aaa1  :f041a04c:bbb1:Bla bla bla1
+aaa234:8710afe3:bbb2:Bla bla bla2
+
+$ cat data | bin/replace -p '\s*:([a-f0-9]+):[^:]+:(.*)' -r 'Name: $2\tId: $1'
+Name: Bla bla bla	Id: a0e7f64b
+Name: Bla bla bla1	Id: f041a04c
+Name: Bla bla bla2	Id: 8710afe3
+```
+=cut
+
+use strict;
+use warnings;
+use utf8;
+use 5.016;
+use Getopt::Long;
+Getopt::Long::Configure ("bundling");
+our ($pattern, $replace);
+GetOptions 'p|pattern=s' => \$pattern,
+           'r|replace=s' => \$replace,
+;
+
+my $buffer = $replace;
+while(<>){
+    $_ =~ $pattern;
+    $replace = "say \"".$replace."\"";
+    eval "$replace";
+    $replace = $buffer;
+}
+#Еремеев Андрей
+#Михин Андрей

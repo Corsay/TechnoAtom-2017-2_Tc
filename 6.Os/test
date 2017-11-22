@@ -1,0 +1,175 @@
+## cd
+-- сменяет каталог на указанный или по-умолчанию на ~ (home)
+# Нормально выполнит
+cd ~
+cd ~/temp/d.tcibisov/OS/shell
+cd ~/temp
+
+# Выдаст ошибку
+cd temp/d.tcibisov/OS/shell
+
+
+## pwd
+-- выводит текущий рабочий каталог
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ pwd
+/home/perl/temp/d.tcibisov/OS/shell
+
+
+## echo
+-- выводит переданный текст дополняя его \n в конце
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ echo
+
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ echo 1
+1
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ echo 2
+2
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ echo 3
+3
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ echo 1  2  3
+1 2 3
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ echo 1 2 3\n 1 2 3
+1 2 3n 1 2 3
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ echo 1 2 3\n 1 2 3
+
+## kill
+
+
+## ps
+ps -elF | grep perl | grep exit
+
+
+cat 5782/cmdline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ cd 12222 |& echo 123 |& cat
+123
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ cd 12222 | echo 123 | cat
+123
+bash: cd: 12222: Нет такого файла или каталога
+
+ps -el | grep 1475
+ps | grep 1475
+cat shell.pm | cat
+
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ cd 12222 | echo 123 | cat
+123
+bash: cd: 12222: Нет такого файла или каталога
+
+perl@perlworkstation:~/temp/d.tcibisov$ cd 12222 | ecco213 123 | cat README.md
+bash: cd: 12222: Нет такого файла или каталога
+# Домашние задания
+ecco213: команда не найдена
+perl@perlworkstation:~/temp/d.tcibisov$ cd 12222 | ecco213 123 | cat README.md | eccco321312
+bash: cd: 12222: Нет такого файла или каталога
+ecco213: команда не найдена
+eccco321312: команда не найдена
+perl@perlworkstation:~/temp/d.tcibisov$ cd 12222 | ecco213 123 | cat README.md | eccco321312 | cd 23231231
+bash: cd: 23231231: Нет такого файла или каталога
+bash: cd: 12222: Нет такого файла или каталога
+eccco321312: команда не найдена
+ecco213: команда не найдена
+perl@perlworkstation:~/temp/d.tcibisov/OS/shell$ cd 12222 | ecco213 123 | cat README.md | eccco321312 | cd 23231231
+bash: cd: 23231231: Нет такого файла или каталога
+cat: README.md: Нет такого файла или каталога
+bash: cd: 12222: Нет такого файла или каталога
+ecco213: команда не найдена
+eccco321312: команда не найдена
+
+
+
+
+
+attr             cpuset   limits      net            projid_map  stat
+autogroup        cwd      loginuid    ns             root        statm
+auxv             environ  map_files   numa_maps      sched       status
+cgroup           exe      maps        oom_adj        schedstat   syscall
+clear_refs       fd       mem         oom_score      sessionid   task
+cmdline          fdinfo   mountinfo   oom_score_adj  setgroups   timers
+comm             gid_map  mounts      pagemap        smaps       uid_map
+coredump_filter  io       mountstats  personality    stack       wchan
+
+  +    +     +     +      +    +       +    +                      +
+F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+
+
+status -> Status(S) Uid Pid Ppid Name(CMD)
+S
+UID
+PID
+PPID
+CMD
+
+sched -> 
+prio                                         :                  121	
+PRI  NI	
+81   1	- приоритет(121-40) = 81	- NI - PRI - 80
+
+statm -> Первая цифра до пробела
+SZ
+
+wchan ->
+wchan
+
+
+
+
+ls|cat|cd 555|eppipip|ls|cat|cd
+ls|cat|cd|pd
+
+my %commands = ( # хеш команд (команда, чистить ли STDOUT)
+cd => { sub => \&cd, clearSTD => 1},
+pwd => { sub => \&pwd, clearSTD => 1},
+echo => { sub => \&echo, clearSTD => 1},
+kill => { sub => \&shell_kill, clearSTD => 1},
+ps => { sub => \&ps, clearSTD => 1},
+);
+
+# выкидываем STDOUT команды если команда не принимает STDIN
+$resultP = [] if ( $commands{$comm[0]}{clearSTD} );
+
+$comm[0] -> $key (как понял у тебя это ведь имя команды) 
+
+
+
+
+
+
+
+
+
+
+
+cat shell.pm|cat shell.pm|cat shell.pm|sort|cat shell.pm|sort > testconv.txt
+
+yes|head -n 10000|wc -l
+
+
+use Time::HiRes qw/gettimeofday/;
+use DDP;
+
+
+
+
+
+
+
+
+

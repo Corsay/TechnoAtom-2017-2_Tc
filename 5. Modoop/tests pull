@@ -1,0 +1,10 @@
+clear
+perl 01-source_array.t
+perl 02-source_text.t
+perl 03-row_simple.t
+perl 04-row_json.t
+perl 05-reducer_json_sum.t
+perl 06-reducer_simple_max_diff.t
+perl 07-reducer_min_max_avg.t
+perl 08-source_fh.t
+

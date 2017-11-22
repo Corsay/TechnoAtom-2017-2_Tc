@@ -1,0 +1,123 @@
+# AnyEvent
+use AnyEvent::IO;
+=head
+sub AE::cv(;&) {
+	my $self = bless {}, 'condvar';
+	$self->{cb} = shift;
+	return $self;
+}
+sub condvar::begin {
+	my $self = shift;
+	$self->{counter}++;
+}
+sub condvar::end {
+	my $self = shift;
+	$self->{counter}--;
+	if ($self->{counter} == 0) {
+		$self->send();
+	}
+}
+sub condvar::cb {
+	my $self = shift;
+	$self->{cb} = shift;
+}
+sub condvar::recv {
+	my $self = shift;
+	$self->_one_loop
+	while !$self->{sent};
+	return @{ $self->{args} };
+} 
+sub condvar::send {
+	my $self = shift;
+	$self->{sent} = 1;
+	$self->{args} = [ @_ ];
+	if ($self->{cb}) { $self->{cb}->() };
+}
+=cut
+# в CORO есть ASYNC так что совместно не использовать
+sub async {
+	my $cb = pop;
+	my $w; $w = AE::timer rand(0.1),0,sub {
+		undef $w;
+		$cb->();
+	};
+	return;
+}
+
+# Параллельно с лимитом
+say "\x1b[1;31m"."Параллельно с лимитом"."\x1b[0m";
+{
+	my $cv = AE::cv; $cv->begin;
+	my @array = 1..5;
+	my $i = 0;
+	my $next; $next = sub {
+		my $cur = $i++;
+		return if $cur > $#array;
+		say "\x1b[32m"."Process"."\x1b[0m $array[$cur]";
+		$cv->begin;
+		async sub {
+			say "\x1b[1;32m"."Processed"."\x1b[0m $array[$cur]";
+			$next->();
+			$cv->end;
+		};
+	}; $next->() for 1..3;
+	$cv->end; $cv->recv;
+}
+say "";
+say "";
+
+# Параллельно
+say "\x1b[1;31m"."Параллельно"."\x1b[0m";
+{
+	my $cv = AE::cv; $cv->begin;
+	my @array = 1..5;
+	for my $cur (@array) {
+		say "\x1b[32m"."Process"."\x1b[0m $cur";
+		$cv->begin;
+		async sub {
+			say "\x1b[1;32m"."Processed"."\x1b[0m $cur";
+			$cv->end;
+		};
+	}
+	$cv->end; $cv->recv;
+}
+say "";
+say "";
+
+# Последовательно
+say "\x1b[1;31m"."Последовательно"."\x1b[0m";
+{
+	my $cv = AE::cv; $cv->begin;
+	my @array = 1..5;
+	my $i = 0;
+	my $next; $next = sub {
+		my $cur = $i++;
+		return if $cur > $#array;
+		say "\x1b[32m"."Process"."\x1b[0m $array[$cur]";
+
+		$cv->begin;
+		async sub {
+			say "\x1b[1;32m"."Processed"."\x1b[0m $array[$cur]";
+			$next->();
+			$cv->end;
+		};
+
+	}; $next->();
+	
+	$cv->end; $cv->recv;
+}
+say "";
+say "";
+
+# Coro
+=head2
+say "\x1b[1;31m"."Coro"."\x1b[0m";
+use Coro;
+my $chan = Coro::Channel->new(2); # 2 elements chan
+async {
+	while(my $val = $chan->get){
+		say "\x1b[32m"."chan out"."\x1b[0m:", $val;
+	}
+};
+$chan->put($_) for 1..3;
+=cut

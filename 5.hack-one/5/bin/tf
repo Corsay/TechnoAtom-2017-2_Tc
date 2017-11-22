@@ -1,0 +1,48 @@
+#!/usr/bin/env perl
+
+#Ромашов, Султанов
+
+use 5.010;
+use warnings;
+use strict;
+use Getopt::Long qw(:config no_ignore_case bundling);
+use Time::Local;	
+
+my $time;
+my $from;
+my $to;
+
+
+GetOptions(
+	'time=s' => \$time,
+	'from=i' => \$from,
+	'to=i' => \$to,
+	);
+
+#my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = 
+#localtime(time);
+#my $time = timelocal( $sec, $min, $hour, $mday, $mon, $year );
+#my $time = timegm( $sec, $min, $hour, $mday, $mon, $year );
+
+my @lines; #file
+
+while (<STDIN>){
+	chomp;
+	if ($_ =~ m/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/){
+		if (defined $1 and defined $2 and $2 >= 1 and $2 <= 12 and 
+			defined $3 and $3 >= 1 and $3 <= 31 and 
+			defined $4 and $4 >= 0 and $4 <= 23 and
+			defined $5 and $5 >= 0 and $5 <= 59 and 
+			defined $6 and $6 >= 0 and $6 <= 59){
+				my $per = timelocal($6,$5,$4,$3,$2-1,$1);
+				if ($per >= $from and $per <= $to){
+					push @lines, $_;
+				}
+		}
+	}	
+}
+
+foreach (@lines) {
+	say $_;
+}
+

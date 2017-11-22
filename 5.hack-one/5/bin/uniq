@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+
+use 5.016;
+use strict;
+use Getopt::Long qw(:config no_ignore_case bundling);
+use Data::Dumper;
+
+my ($c) = '';
+
+GetOptions ('c!' => \$c,
+            );
+
+my $inpLine; my $prevLine; my @arrNumb; my @arr;
+
+while (<STDIN>) {
+  if (!$prevLine) {
+    $prevLine = $_;
+    push @arr, $_;
+    push @arrNumb, 1;
+  } else {
+    $inpLine = $_;
+    if ($prevLine eq $inpLine) {
+      $arrNumb[$#arrNumb]++;
+    } else {
+
+      push @arr, $_;
+      push @arrNumb, 1;
+    }
+    $prevLine = $_;
+  }
+}
+
+foreach my $i (0..$#arr) {
+  print sprintf("%7d %s", $arrNumb[$i], $arr[$i]);
+}
+

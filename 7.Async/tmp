@@ -1,0 +1,105 @@
+use 5.016;
+use DDP;
+
+# AnyEvent
+use AnyEvent::IO;
+=head
+sub AE::cv(;&) {
+	my $self = bless {}, 'condvar';
+	$self->{cb} = shift;
+	return $self;
+}
+sub condvar::cb {
+	my $self = shift;
+	$self->{cb} = shift;
+}
+sub condvar::send {
+	my $self = shift;
+	$self->{sent} = 1;
+	$self->{args} = [ @_ ];
+	if ($self->{cb}) { $self->{cb}->() };
+}
+=cut
+sub async {
+	my $cb = pop;
+	my $w; $w = AE::timer rand(0.1),0,sub {
+		undef $w;
+		$cb->();
+	};
+	return;
+}
+
+# Параллельно с лимитом
+say "\x1b[1;31mПараллельно с лимитом\x1b[0m";
+{
+	my $cv = AE::cv; $cv->begin;
+	my @array = 1..10;
+	my $i = 0;
+	my $next; $next = sub {
+		my $cur = $i++;
+		return if $cur > $#array;
+		say "\x1b[32mProcess\x1b[0m $array[$cur]";
+		$cv->begin;
+		async sub {
+			say "\x1b[1;32mProcessed\x1b[0m $array[$cur]";
+			$next->();
+			$cv->end;
+		};
+	}; $next->() for 1..3;
+	$cv->end; $cv->recv;
+}
+say "";
+say "";
+
+# Параллельно
+say "\x1b[1;31mПараллельно\x1b[0m";
+{
+	my $cv = AE::cv; $cv->begin;
+	my @array = 1..10;
+	for my $cur (@array) {
+		say "\x1b[32mProcess\x1b[0m $cur";
+		$cv->begin;
+		async sub {
+			say "\x1b[1;32mProcessed\x1b[0m $cur";
+			$cv->end;
+		};
+	}
+	$cv->end; $cv->recv;
+}
+say "";
+say "";
+
+# Последовательно
+say "\x1b[1;31mПоследовательно\x1b[0m";
+{
+	my $cv = AE::cv; $cv->begin;
+	my @array = 1..10;
+	my $i = 0;
+	my $next; $next = sub {
+		my $cur = $i++;
+		return if $cur > $#array;
+		say "\x1b[32mProcess\x1b[0m $array[$cur]";
+
+		$cv->begin;
+		async sub {
+			say "\x1b[1;32mProcessed\x1b[0m $array[$cur]";
+			$next->();
+			$cv->end;
+		};
+
+	}; $next->();
+	
+	$cv->end; $cv->recv;
+}
+say "";
+say "";
+
+# Coro
+say "\x1b[1;31mCoro\x1b[0m";
+use Coro;
+my $chan = Coro::Channel->new(2); # 2 elements chan
+async {
+	while(my $val = $chan->get){
+		say "chan out:", $val;
+	}
+};

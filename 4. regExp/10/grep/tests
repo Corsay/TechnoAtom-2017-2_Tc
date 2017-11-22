@@ -1,0 +1,12 @@
+
+head -70 bigdict.txt | perl grep.pl "ре" -nC2
+head -70 bigdict.txt | grep "ре" -nC2
+
+head -70 bigdict.txt | perl grep.pl "ре" -nC2 -A1 -B3
+head -70 bigdict.txt | grep "ре" -nC2 -A1 -B3
+
+head -20 bigdict.txt | perl grep.pl "е" -invC1
+head -20 bigdict.txt | grep "е" -invC1
+
+head -20 bigdict.txt | perl grep.pl "е" -invFC1
+head -20 bigdict.txt | grep "е" -invFC1
