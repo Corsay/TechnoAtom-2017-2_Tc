@@ -1,0 +1,300 @@
+[  571 2017-10-18 22:02:37.170 INFO] delete events [ bee57abb00000000:2 bde57abb00000000:2 bce57abb00000000:2 bfe57abb00000000:2 c0e57abb00000000:2 ]
+[  351 2017-10-18 22:02:37.180 INFO] a1fd93bb00000000:3: (disturber=1080783627, journal=-3684297) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.180 INFO] a2fd93bb00000000:3: Get event a2fd93bb00000000:3 from queue: type 7
+[  571 2017-10-18 22:02:37.184 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:37.187 INFO] 5d3f85bb00000000:1: Get event 5d3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:37.194 WARN] My::Dialogues::GetPostByID failed: Error 00003302: Dialogue not found at /usr/local/mpop/lib/My/Dialogues.pm line 288.
+[  351 2017-10-18 22:02:37.200 INFO] a2fd93bb00000000:3: (disturber=1327134356, journal=1327134356) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.200 INFO] a3fd93bb00000000:3: Get event a3fd93bb00000000:3 from queue: type 12
+[  351 2017-10-18 22:02:37.214 INFO] a3fd93bb00000000:3: (disturber=1712736664, journal=1712736664) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:37.217 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.220 INFO] 5d3f85bb00000000:1: (disturber=680561811, journal=538956031) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.221 INFO] 5e3f85bb00000000:1: Get event 5e3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:37.238 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.241 INFO] 5e3f85bb00000000:1: (disturber=391157599, journal=680561811) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.241 INFO] 5f3f85bb00000000:1: Get event 5f3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:37.249 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.269 INFO] 5f3f85bb00000000:1: (disturber=680561811, journal=879924266) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.270 INFO] 603f85bb00000000:1: Get event 603f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:37.287 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.289 INFO] 603f85bb00000000:1: (disturber=938098958, journal=680561811) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.290 INFO] 613f85bb00000000:1: Get event 613f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:37.306 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.308 INFO] 613f85bb00000000:1: (disturber=1529333478, journal=680561811) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  351 2017-10-18 22:02:37.314 INFO] delete events [ 9ffd93bb00000000:3 a1fd93bb00000000:3 a0fd93bb00000000:3 a2fd93bb00000000:3 a3fd93bb00000000:3 ]
+[  351 2017-10-18 22:02:37.328 INFO] Fetched 5 events
+[  351 2017-10-18 22:02:37.332 INFO] b8fd93bb00000000:3: Get event b8fd93bb00000000:3 from queue: type 10
+[  351 2017-10-18 22:02:37.360 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:37.364 INFO] b8fd93bb00000000:3: (disturber=1712736664, journal=1686859059) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.364 INFO] b9fd93bb00000000:3: Get event b9fd93bb00000000:3 from queue: type 10
+[  351 2017-10-18 22:02:37.372 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:37.375 INFO] b9fd93bb00000000:3: (disturber=1712736664, journal=730435720) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.375 INFO] bafd93bb00000000:3: Get event bafd93bb00000000:3 from queue: type 29
+[  571 2017-10-18 22:02:37.398 INFO] delete events [ 5d3f85bb00000000:1 5e3f85bb00000000:1 603f85bb00000000:1 613f85bb00000000:1 5f3f85bb00000000:1 ]
+[  351 2017-10-18 22:02:37.407 INFO] bafd93bb00000000:3: (disturber=1503184253, journal=-3860065) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.408 INFO] bbfd93bb00000000:3: Get event bbfd93bb00000000:3 from queue: type 10
+[  571 2017-10-18 22:02:37.412 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:37.416 INFO] bdfd93bb00000000:3: Get event bdfd93bb00000000:3 from queue: type 33
+[  571 2017-10-18 22:02:37.420 INFO] bdfd93bb00000000:3: Type: 33, meta: ActiveUser=-3686004(tainvmira), JournalUser=-3686004(tainvmira), ID=not defined, Parent=6484
+[  351 2017-10-18 22:02:37.424 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:37.427 INFO] bbfd93bb00000000:3: (disturber=1561985986, journal=1712736664) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.427 INFO] bcfd93bb00000000:3: Get event bcfd93bb00000000:3 from queue: type 29
+[  571 2017-10-18 22:02:37.447 WARN] value -3686004 is out of range for uint32_t at /usr/share/perl5/vendor_perl/MR/Tarantool/Box/Record/Trait/Class.pm line 313.
+[  571 2017-10-18 22:02:37.452 INFO] bdfd93bb00000000:3: (disturber=-3686004, journal=-3686004) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.453 INFO] befd93bb00000000:3: Get event befd93bb00000000:3 from queue: type 13
+[  571 2017-10-18 22:02:37.464 WARN] My::SilverHistory::MicroRaker: My::IProto=HASH(0x2937818):Error 00000B02: Can't do select
+[  571 2017-10-18 22:02:37.464 WARN] GetFullEvent: Error 00000B02: Can't do select
+[  351 2017-10-18 22:02:37.479 INFO] bcfd93bb00000000:3: (disturber=47432886, journal=-3686004) RSS: [0 = 69198 - 69198]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:37.568 INFO] befd93bb00000000:3: (disturber=1447074192, journal=1447074192) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.568 INFO] bffd93bb00000000:3: Get event bffd93bb00000000:3 from queue: type 13
+[  571 2017-10-18 22:02:37.569 INFO] bffd93bb00000000:3: Type: 13, meta: ActiveUser=-3845312(stockings), JournalUser=-3845312(stockings), ID=not defined, Parent=344
+[  351 2017-10-18 22:02:37.593 INFO] delete events [ b9fd93bb00000000:3 b8fd93bb00000000:3 bafd93bb00000000:3 bbfd93bb00000000:3 bcfd93bb00000000:3 ]
+[  351 2017-10-18 22:02:37.608 INFO] Fetched 5 events
+[  351 2017-10-18 22:02:37.612 INFO] 2e356ebb00000000:4: Get event 2e356ebb00000000:4 from queue: type 10
+[  351 2017-10-18 22:02:37.662 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.674 WARN] value -3845312 is out of range for uint32_t at /usr/share/perl5/vendor_perl/MR/Tarantool/Box/Record/Trait/Class.pm line 313.
+[  571 2017-10-18 22:02:37.678 INFO] bffd93bb00000000:3: (disturber=-3845312, journal=-3845312) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.678 INFO] "bdfd93bb00000000:3: My::Mras->Check: code=0, signature=No signature for type video_item Need_spam_action=1, message_length=113, streamed=0, stream_len=0, params Age: 1570426; Type: 33; Flags: 2; Subject: Ð\x{93}Ð»Ð°Ð²Ð° Ð\x{94}Ð\x{9d}Ð  Ð¾Ð±Ñ\x{8a}Ñ\x{8f}Ñ\x{81}Ð½Ð¸Ð», Ð¿Ð¾Ñ\x{87}ÐµÐ¼Ñ\x{83} Ð¾Ð½ Ð´Ð¾ Ñ\x{81}Ð¸Ñ\x{85} Ð¿Ð¾Ñ\x{80} Ð½Ðµ Ñ\x{83}Ñ\x{81}Ñ\x{82}Ñ\x{80}Ð°Ð½Ð¸Ð» Ð\x{9f}Ð¾Ñ\x{80}Ð¾Ñ\x{88}ÐµÐ½ÐºÐ¾; Location: unknown; Referer: unknown; Meta: ActiveUser=-3686004(tainvmira), JournalUser=-3686004(tainvmira), ID=not defined, Parent=6484; Add_Data: (ParentID=6484, DecrementKey=135037651, EventTime=1508353355), url=10.161.76.250:42500\n" at /usr/local/mpop/lib/My/Queue/MrasChecker/Processor.pm line 119
+[  351 2017-10-18 22:02:37.728 INFO] 2e356ebb00000000:4: (disturber=50909544, journal=331181) RSS: [1 = 69199 - 69198]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.729 INFO] 2f356ebb00000000:4: Get event 2f356ebb00000000:4 from queue: type 10
+[  351 2017-10-18 22:02:37.751 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.768 INFO] c0fd93bb00000000:3: Get event c0fd93bb00000000:3 from queue: type 29
+[  571 2017-10-18 22:02:37.779 INFO] c0fd93bb00000000:3: (disturber=579044514, journal=-3845312) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.780 INFO] c1fd93bb00000000:3: Get event c1fd93bb00000000:3 from queue: type 29
+[  351 2017-10-18 22:02:37.791 INFO] 2f356ebb00000000:4: (disturber=331181, journal=17775015) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:37.791 INFO] c1fd93bb00000000:3: (disturber=1080758533, journal=-3675406) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  351 2017-10-18 22:02:37.791 INFO] 30356ebb00000000:4: Get event 30356ebb00000000:4 from queue: type 10
+[  351 2017-10-18 22:02:37.794 WARN] My::Dialogues::GetPostByID failed: Error 00003302: Dialogue not found at /usr/local/mpop/lib/My/Dialogues.pm line 288.
+[  351 2017-10-18 22:02:37.802 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.834 INFO] bffd93bb00000000:3: My::Mras->Check: code=0, signature=No signature for type photo Need_spam_action=1, message_length=0, streamed=1, stream_len=31478, params Age: 5263952; Type: 13; Flags: 2; Subject: erotic photos & video http://poplovephoto.info/stockings; Location: unknown; Referer: unknown; Meta: ActiveUser=-3845312(stockings), JournalUser=-3845312(stockings), ID=not defined, Parent=344; Add_Data: (UniqFileId=353875031, ParentID=344, DecrementKey=409097762, HiddenAlbum=1, EventTime=1508353355), url=10.161.65.17:42500
+[  351 2017-10-18 22:02:37.842 INFO] 30356ebb00000000:4: (disturber=331181, journal=100294889) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.842 INFO] 31356ebb00000000:4: Get event 31356ebb00000000:4 from queue: type 10
+[  351 2017-10-18 22:02:37.845 WARN] My::Dialogues::GetPostByID failed: Error 00003302: Dialogue not found at /usr/local/mpop/lib/My/Dialogues.pm line 288.
+[  571 2017-10-18 22:02:37.850 INFO] delete events [ bdfd93bb00000000:3 c0fd93bb00000000:3 c1fd93bb00000000:3 befd93bb00000000:3 bffd93bb00000000:3 ]
+[  351 2017-10-18 22:02:37.854 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.864 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:37.868 INFO] 7b3f85bb00000000:1: Get event 7b3f85bb00000000:1 from queue: type 10
+[  351 2017-10-18 22:02:37.895 INFO] 31356ebb00000000:4: (disturber=331181, journal=37545242) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:37.895 INFO] 32356ebb00000000:4: Get event 32356ebb00000000:4 from queue: type 10
+[  571 2017-10-18 22:02:37.896 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:37.898 WARN] My::Dialogues::GetPostByID failed: Error 00003302: Dialogue not found at /usr/local/mpop/lib/My/Dialogues.pm line 288.
+[  351 2017-10-18 22:02:37.906 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.912 INFO] 7b3f85bb00000000:1: (disturber=1531369012, journal=31845624) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.912 INFO] 7c3f85bb00000000:1: Get event 7c3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:37.930 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.932 INFO] 7c3f85bb00000000:1: (disturber=1769882669, journal=1573089537) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.933 INFO] 7d3f85bb00000000:1: Get event 7d3f85bb00000000:1 from queue: type 10
+[  351 2017-10-18 22:02:37.947 INFO] 32356ebb00000000:4: (disturber=331181, journal=179415453) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:37.950 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:37.952 INFO] 7d3f85bb00000000:1: (disturber=1787091693, journal=1769882669) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.953 INFO] 7e3f85bb00000000:1: Get event 7e3f85bb00000000:1 from queue: type 29
+[  571 2017-10-18 22:02:37.992 INFO] 7e3f85bb00000000:1: (disturber=1308448450, journal=-3684170) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:37.992 INFO] 7f3f85bb00000000:1: Get event 7f3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:38.009 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:38.011 INFO] 7f3f85bb00000000:1: (disturber=1329100286, journal=1769882669) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.110 INFO] delete events [ 7b3f85bb00000000:1 7c3f85bb00000000:1 7d3f85bb00000000:1 7f3f85bb00000000:1 7e3f85bb00000000:1 ]
+[  571 2017-10-18 22:02:38.125 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:38.129 INFO] 16e67abb00000000:2: Get event 16e67abb00000000:2 from queue: type 13
+[  571 2017-10-18 22:02:38.144 WARN] My::SilverHistory::MicroRaker: My::IProto=HASH(0x2937818):Error 00000B02: Can't do select
+[  571 2017-10-18 22:02:38.144 WARN] GetFullEvent: Error 00000B02: Can't do select
+[  351 2017-10-18 22:02:38.217 INFO] delete events [ 2e356ebb00000000:4 2f356ebb00000000:4 30356ebb00000000:4 31356ebb00000000:4 32356ebb00000000:4 ]
+[  351 2017-10-18 22:02:38.231 INFO] Fetched 5 events
+[  351 2017-10-18 22:02:38.234 INFO] 8f3f85bb00000000:1: Get event 8f3f85bb00000000:1 from queue: type 13
+[  351 2017-10-18 22:02:38.238 INFO] 8f3f85bb00000000:1: Type: 13, meta: ActiveUser=-3599086(fkfif), JournalUser=-3599086(fkfif), ID=not defined, Parent=34298
+[  571 2017-10-18 22:02:38.252 INFO] 16e67abb00000000:2: (disturber=496387917, journal=496387917) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.252 INFO] 17e67abb00000000:2: Get event 17e67abb00000000:2 from queue: type 10
+[  571 2017-10-18 22:02:38.270 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:38.277 INFO] 17e67abb00000000:2: (disturber=1818256073, journal=401174989) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.324 INFO] 18e67abb00000000:2: Get event 18e67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:38.344 INFO] 18e67abb00000000:2: (disturber=189127660, journal=-3080716) RSS: [0 = 66417 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.344 INFO] 19e67abb00000000:2: Get event 19e67abb00000000:2 from queue: type 7
+[  351 2017-10-18 22:02:38.347 WARN] value -3599086 is out of range for uint32_t at /usr/share/perl5/vendor_perl/MR/Tarantool/Box/Record/Trait/Class.pm line 313.
+[  351 2017-10-18 22:02:38.350 INFO] 8f3f85bb00000000:1: (disturber=-3599086, journal=-3599086) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:38.351 INFO] 903f85bb00000000:1: Get event 903f85bb00000000:1 from queue: type 33
+[  571 2017-10-18 22:02:38.364 INFO] 19e67abb00000000:2: (disturber=563544335, journal=563544335) RSS: [1 = 66418 - 66417]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.364 INFO] 1ae67abb00000000:2: Get event 1ae67abb00000000:2 from queue: type 10
+[  571 2017-10-18 22:02:38.373 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:38.380 INFO] 1ae67abb00000000:2: (disturber=1818256073, journal=362734706) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  351 2017-10-18 22:02:38.382 INFO] 903f85bb00000000:1: (disturber=1786711209, journal=1786711209) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:38.493 INFO] delete events [ 18e67abb00000000:2 16e67abb00000000:2 17e67abb00000000:2 19e67abb00000000:2 1ae67abb00000000:2 ]
+[  571 2017-10-18 22:02:38.507 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:38.510 INFO] dbfd93bb00000000:3: Get event dbfd93bb00000000:3 from queue: type 10
+[  571 2017-10-18 22:02:38.538 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:38.545 INFO] dbfd93bb00000000:3: (disturber=1818256073, journal=529181112) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.545 INFO] dcfd93bb00000000:3: Get event dcfd93bb00000000:3 from queue: type 10
+[  571 2017-10-18 22:02:38.553 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:38.560 INFO] dcfd93bb00000000:3: (disturber=1818256073, journal=497684468) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.561 INFO] ddfd93bb00000000:3: Get event ddfd93bb00000000:3 from queue: type 10
+[  571 2017-10-18 22:02:38.569 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:38.575 INFO] ddfd93bb00000000:3: (disturber=1818256073, journal=187645144) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.576 INFO] defd93bb00000000:3: Get event defd93bb00000000:3 from queue: type 10
+[  571 2017-10-18 22:02:38.583 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:38.590 INFO] defd93bb00000000:3: (disturber=1818256073, journal=22119568) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.591 INFO] dffd93bb00000000:3: Get event dffd93bb00000000:3 from queue: type 13
+[  571 2017-10-18 22:02:38.603 WARN] My::SilverHistory::MicroRaker: My::IProto=HASH(0x2937818):Error 00000B02: Can't do select
+[  571 2017-10-18 22:02:38.603 WARN] GetFullEvent: Error 00000B02: Can't do select
+[  571 2017-10-18 22:02:38.704 INFO] dffd93bb00000000:3: (disturber=867464447, journal=867464447) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:38.987 INFO] delete events [ ddfd93bb00000000:3 dbfd93bb00000000:3 dcfd93bb00000000:3 dffd93bb00000000:3 defd93bb00000000:3 ]
+[  571 2017-10-18 22:02:39.001 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:39.005 INFO] 39e67abb00000000:2: Get event 39e67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.061 INFO] 39e67abb00000000:2: (disturber=130560070, journal=-3852745) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.061 INFO] 3ae67abb00000000:2: Get event 3ae67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.164 INFO] 3ae67abb00000000:2: (disturber=529917551, journal=-3652170) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.164 INFO] 3be67abb00000000:2: Get event 3be67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.179 INFO] 3be67abb00000000:2: (disturber=252020008, journal=-3699361) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.180 INFO] 3ce67abb00000000:2: Get event 3ce67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.216 INFO] 3ce67abb00000000:2: (disturber=130560070, journal=-3852745) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.216 INFO] 3de67abb00000000:2: Get event 3de67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.267 INFO] 3de67abb00000000:2: (disturber=665398136, journal=-3815600) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.380 INFO] delete events [ 3be67abb00000000:2 3ae67abb00000000:2 39e67abb00000000:2 3de67abb00000000:2 3ce67abb00000000:2 ]
+[  571 2017-10-18 22:02:39.394 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:39.398 INFO] 43e67abb00000000:2: Get event 43e67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.437 INFO] 43e67abb00000000:2: (disturber=1700598919, journal=-3532897) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.437 INFO] 44e67abb00000000:2: Get event 44e67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.449 INFO] 44e67abb00000000:2: (disturber=1700599020, journal=-3226425) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.450 INFO] 45e67abb00000000:2: Get event 45e67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:39.475 INFO] 45e67abb00000000:2: (disturber=102251542, journal=-3054845) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.475 INFO] 46e67abb00000000:2: Get event 46e67abb00000000:2 from queue: type 29
+[  351 2017-10-18 22:02:39.517 INFO] 913f85bb00000000:1: Get event 913f85bb00000000:1 from queue: type 13
+[  351 2017-10-18 22:02:39.629 INFO] 913f85bb00000000:1: (disturber=202967639, journal=202967639) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:39.641 INFO] 46e67abb00000000:2: (disturber=1700597022, journal=-11762) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.645 INFO] 47e67abb00000000:2: Get event 47e67abb00000000:2 from queue: type 10
+[  571 2017-10-18 22:02:39.662 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:39.665 INFO] 47e67abb00000000:2: (disturber=1769882669, journal=995381955) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  351 2017-10-18 22:02:39.677 INFO] 923f85bb00000000:1: Get event 923f85bb00000000:1 from queue: type 10
+[  351 2017-10-18 22:02:39.688 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:39.691 INFO] 923f85bb00000000:1: (disturber=1786711209, journal=513228614) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:39.691 INFO] 933f85bb00000000:1: Get event 933f85bb00000000:1 from queue: type 10
+[  351 2017-10-18 22:02:39.719 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:39.722 INFO] 933f85bb00000000:1: (disturber=1139601485, journal=202967639) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:39.806 INFO] delete events [ 44e67abb00000000:2 43e67abb00000000:2 47e67abb00000000:2 45e67abb00000000:2 46e67abb00000000:2 ]
+[  571 2017-10-18 22:02:39.820 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:39.824 INFO] a1356ebb00000000:4: Get event a1356ebb00000000:4 from queue: type 29
+[  571 2017-10-18 22:02:39.839 INFO] a1356ebb00000000:4: (disturber=1308448450, journal=-3691107) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.839 INFO] a2356ebb00000000:4: Get event a2356ebb00000000:4 from queue: type 31
+[  351 2017-10-18 22:02:39.863 INFO] 8f3f85bb00000000:1: My::Mras->Check: code=0, signature=No signature for type photo Need_spam_action=1, message_length=0, streamed=1, stream_len=2309933, params Age: 11491111; Type: 13; Flags: 2; Subject: ; Location: unknown; Referer: unknown; Meta: ActiveUser=-3599086(fkfif), JournalUser=-3599086(fkfif), ID=not defined, Parent=34298; Add_Data: (UniqFileId=822612023, ParentID=34298, DecrementKey=1139601485, HiddenAlbum=1, EventTime=1508353356), url=10.161.80.250:42500
+[  571 2017-10-18 22:02:39.871 INFO] a2356ebb00000000:4: (disturber=1327134356, journal=1327134356) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.871 INFO] a3356ebb00000000:4: Get event a3356ebb00000000:4 from queue: type 33
+[26610 2017-10-18 22:02:39.874 INFO] eb346ebb00000000:4: Get event eb346ebb00000000:4 from queue: type 31
+[  351 2017-10-18 22:02:39.880 INFO] delete events [ 903f85bb00000000:1 923f85bb00000000:1 933f85bb00000000:1 913f85bb00000000:1 8f3f85bb00000000:1 ]
+[  571 2017-10-18 22:02:39.890 INFO] a3356ebb00000000:4: (disturber=1327134356, journal=1327134356) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.891 INFO] a4356ebb00000000:4: Get event a4356ebb00000000:4 from queue: type 33
+[  351 2017-10-18 22:02:39.894 INFO] Fetched 5 events
+[26610 2017-10-18 22:02:39.895 INFO] eb346ebb00000000:4: (disturber=323774, journal=323774) RSS: [1536 = 68191 - 66655]; VSS: [1357 = 294614 - 293257]
+[26610 2017-10-18 22:02:39.896 INFO] ec346ebb00000000:4: Get event ec346ebb00000000:4 from queue: type 31
+[  351 2017-10-18 22:02:39.899 INFO] 4efe93bb00000000:3: Get event 4efe93bb00000000:3 from queue: type 10
+[  351 2017-10-18 22:02:39.905 WARN] My::Dialogues::GetPostByID failed: Error 00003302: Dialogue not found at /usr/local/mpop/lib/My/Dialogues.pm line 288.
+[  571 2017-10-18 22:02:39.906 INFO] a4356ebb00000000:4: (disturber=1327134356, journal=1327134356) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:39.907 INFO] a5356ebb00000000:4: Get event a5356ebb00000000:4 from queue: type 29
+[26610 2017-10-18 22:02:39.909 INFO] ec346ebb00000000:4: (disturber=323774, journal=323774) RSS: [0 = 68191 - 68191]; VSS: [0 = 294614 - 294614]
+[  351 2017-10-18 22:02:39.929 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:39.932 INFO] 4efe93bb00000000:3: (disturber=1701128415, journal=1519793467) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:39.932 INFO] 4ffe93bb00000000:3: Get event 4ffe93bb00000000:3 from queue: type 10
+[  571 2017-10-18 22:02:39.934 INFO] a5356ebb00000000:4: (disturber=1080783627, journal=-3691107) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[26610 2017-10-18 22:02:39.935 INFO] e9346ebb00000000:4: My::Mras->Check: code=0, signature=No signature for type photo Need_spam_action=1, message_length=0, streamed=1, stream_len=34376, params Age: 349153; Type: 13; Flags: 2; Subject: Не каждой женщине суждено жить, как за «каменной» стеной — поэтому она со временем тоже может стать «каменной».; Location: unknown; Referer: unknown; Meta: ActiveUser=-3058961(discoverygroup), JournalUser=-3058961(discoverygroup), ID=not defined, Parent=22293; Add_Data: (UniqFileId=2496509480, ParentID=22293, DecrementKey=433262959, HiddenAlbum=1, EventTime=1508353352), url=10.161.98.226:42500
+[  351 2017-10-18 22:02:39.942 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:39.947 INFO] 4ffe93bb00000000:3: (disturber=1701128415, journal=1392195223) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:39.948 INFO] 50fe93bb00000000:3: Get event 50fe93bb00000000:3 from queue: type 10
+[  351 2017-10-18 22:02:39.956 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:39.958 INFO] 50fe93bb00000000:3: (disturber=1701128415, journal=569165398) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:39.958 INFO] 51fe93bb00000000:3: Get event 51fe93bb00000000:3 from queue: type 10
+[  351 2017-10-18 22:02:39.967 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:39.970 INFO] 51fe93bb00000000:3: (disturber=1701128415, journal=1503184253) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:39.970 INFO] 52fe93bb00000000:3: Get event 52fe93bb00000000:3 from queue: type 10
+[  351 2017-10-18 22:02:39.979 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:39.983 INFO] 52fe93bb00000000:3: (disturber=1701128415, journal=1267405371) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:40.016 INFO] delete events [ a1356ebb00000000:4 a3356ebb00000000:4 a2356ebb00000000:4 a5356ebb00000000:4 a4356ebb00000000:4 ]
+[  571 2017-10-18 22:02:40.031 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:40.034 INFO] e93f85bb00000000:1: Get event e93f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:40.061 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:40.082 INFO] delete events [ 4efe93bb00000000:3 4ffe93bb00000000:3 51fe93bb00000000:3 50fe93bb00000000:3 52fe93bb00000000:3 ]
+[  571 2017-10-18 22:02:40.082 INFO] e93f85bb00000000:1: (disturber=846090601, journal=514863) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.082 INFO] ea3f85bb00000000:1: Get event ea3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:40.090 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:40.096 INFO] Fetched 5 events
+[  351 2017-10-18 22:02:40.100 INFO] b5356ebb00000000:4: Get event b5356ebb00000000:4 from queue: type 10
+[  571 2017-10-18 22:02:40.111 INFO] ea3f85bb00000000:1: (disturber=846090601, journal=41799527) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.111 INFO] eb3f85bb00000000:1: Get event eb3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:40.119 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:40.127 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:40.130 INFO] b5356ebb00000000:4: (disturber=1327134356, journal=1315734276) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:40.130 INFO] b6356ebb00000000:4: Get event b6356ebb00000000:4 from queue: type 29
+[  571 2017-10-18 22:02:40.140 INFO] eb3f85bb00000000:1: (disturber=846090601, journal=55280880) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.141 INFO] ec3f85bb00000000:1: Get event ec3f85bb00000000:1 from queue: type 10
+[26610 2017-10-18 22:02:40.143 INFO] ea346ebb00000000:4: My::Mras->Check: code=0, signature=No signature for type photo Need_spam_action=1, message_length=0, streamed=1, stream_len=6377579, params Age: 612517; Type: 13; Flags: 2; Subject: ; Location: unknown; Referer: unknown; Meta: ActiveUser=-3785629(anzhelika-lika-kisa), JournalUser=-3785629(anzhelika-lika-kisa), ID=not defined, Parent=22339; Add_Data: (UniqFileId=2759817612, ParentID=22339, DecrementKey=433262959, HiddenAlbum=1, EventTime=1508353352), url=10.161.80.246:42500
+[  571 2017-10-18 22:02:40.159 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:40.161 INFO] ec3f85bb00000000:1: (disturber=647653421, journal=1813094986) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.162 INFO] ed3f85bb00000000:1: Get event ed3f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:40.171 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  351 2017-10-18 22:02:40.174 INFO] b6356ebb00000000:4: (disturber=584679845, journal=-3038835) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:40.174 INFO] b7356ebb00000000:4: Get event b7356ebb00000000:4 from queue: type 29
+[  571 2017-10-18 22:02:40.192 INFO] ed3f85bb00000000:1: (disturber=846090601, journal=10070) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  351 2017-10-18 22:02:40.203 INFO] b7356ebb00000000:4: (disturber=1774315488, journal=-3045537) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:40.204 INFO] b8356ebb00000000:4: Get event b8356ebb00000000:4 from queue: type 29
+[  351 2017-10-18 22:02:40.215 INFO] b8356ebb00000000:4: (disturber=957974068, journal=-3044774) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:40.216 INFO] b9356ebb00000000:4: Get event b9356ebb00000000:4 from queue: type 29
+[  351 2017-10-18 22:02:40.226 INFO] b9356ebb00000000:4: (disturber=1541685787, journal=-3599142) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:40.298 INFO] delete events [ b8356ebb00000000:4 b9356ebb00000000:4 b5356ebb00000000:4 b6356ebb00000000:4 b7356ebb00000000:4 ]
+[  351 2017-10-18 22:02:40.313 INFO] Fetched 5 events
+[  351 2017-10-18 22:02:40.316 INFO] f33f85bb00000000:1: Get event f33f85bb00000000:1 from queue: type 10
+[  571 2017-10-18 22:02:40.323 INFO] delete events [ e93f85bb00000000:1 ec3f85bb00000000:1 eb3f85bb00000000:1 ea3f85bb00000000:1 ed3f85bb00000000:1 ]
+[  571 2017-10-18 22:02:40.337 INFO] Fetched 5 events
+[  571 2017-10-18 22:02:40.341 INFO] 70e67abb00000000:2: Get event 70e67abb00000000:2 from queue: type 13
+[  351 2017-10-18 22:02:40.344 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[  571 2017-10-18 22:02:40.346 INFO] 70e67abb00000000:2: Type: 13, meta: ActiveUser=-3287910(for_men_only1), JournalUser=-3287910(for_men_only1), ID=not defined, Parent=14971
+[26610 2017-10-18 22:02:40.354 INFO] delete events [ e8346ebb00000000:4 e9346ebb00000000:4 ec346ebb00000000:4 eb346ebb00000000:4 ea346ebb00000000:4 ]
+[  351 2017-10-18 22:02:40.365 INFO] f33f85bb00000000:1: (disturber=846090601, journal=345780432) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:40.365 INFO] f43f85bb00000000:1: Get event f43f85bb00000000:1 from queue: type 10
+[26610 2017-10-18 22:02:40.368 INFO] Fetched 5 events
+[26610 2017-10-18 22:02:40.373 INFO] fd3f85bb00000000:1: Get event fd3f85bb00000000:1 from queue: type 29
+[  351 2017-10-18 22:02:40.374 WARN] Use of uninitialized value in numeric lt (<) at /usr/local/mpop/lib/My/Smiles.pm line 287.
+[26610 2017-10-18 22:02:40.386 INFO] fd3f85bb00000000:1: (disturber=1478783271, journal=-3047916) RSS: [0 = 68191 - 68191]; VSS: [0 = 294614 - 294614]
+[26610 2017-10-18 22:02:40.387 INFO] fe3f85bb00000000:1: Get event fe3f85bb00000000:1 from queue: type 29
+[  351 2017-10-18 22:02:40.394 INFO] f43f85bb00000000:1: (disturber=846090601, journal=20142365) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  351 2017-10-18 22:02:40.395 INFO] f53f85bb00000000:1: Get event f53f85bb00000000:1 from queue: type 13
+[  351 2017-10-18 22:02:40.395 INFO] f53f85bb00000000:1: Type: 13, meta: ActiveUser=-3847549(vladimir_news), JournalUser=-3847549(vladimir_news), ID=not defined, Parent=13309
+[26610 2017-10-18 22:02:40.396 INFO] fe3f85bb00000000:1: (disturber=1478783271, journal=-3194793) RSS: [0 = 68191 - 68191]; VSS: [0 = 294614 - 294614]
+[26610 2017-10-18 22:02:40.396 INFO] ff3f85bb00000000:1: Get event ff3f85bb00000000:1 from queue: type 29
+[26610 2017-10-18 22:02:40.443 INFO] ff3f85bb00000000:1: (disturber=1478783271, journal=-3044844) RSS: [0 = 68191 - 68191]; VSS: [0 = 294614 - 294614]
+[26610 2017-10-18 22:02:40.444 INFO] 004085bb00000000:1: Get event 004085bb00000000:1 from queue: type 29
+[26610 2017-10-18 22:02:40.454 INFO] 004085bb00000000:1: (disturber=1483892039, journal=-3223498) RSS: [0 = 68191 - 68191]; VSS: [0 = 294614 - 294614]
+[26610 2017-10-18 22:02:40.454 INFO] 014085bb00000000:1: Get event 014085bb00000000:1 from queue: type 29
+[  571 2017-10-18 22:02:40.456 WARN] value -3287910 is out of range for uint32_t at /usr/share/perl5/vendor_perl/MR/Tarantool/Box/Record/Trait/Class.pm line 313.
+[  571 2017-10-18 22:02:40.460 INFO] 70e67abb00000000:2: (disturber=-3287910, journal=-3287910) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.460 INFO] 71e67abb00000000:2: Get event 71e67abb00000000:2 from queue: type 30
+[  571 2017-10-18 22:02:40.468 WARN] :SELECT OPTS=$VAR1 = {
+[  571 2017-10-18 22:02:40.468 WARN]           'stor_id' => '7816c5ff4802000045d1c0090b000000',
+[  571 2017-10-18 22:02:40.468 WARN]           '_flags' => 0,
+[  571 2017-10-18 22:02:40.468 WARN]           'filters' => [
+[  571 2017-10-18 22:02:40.468 WARN]                        {
+[  571 2017-10-18 22:02:40.468 WARN]                          'ID' => '6f2100002d62c009',
+[  571 2017-10-18 22:02:40.468 WARN]                          'Flags' => [
+[  571 2017-10-18 22:02:40.468 WARN]                                     'not_and',
+[  571 2017-10-18 22:02:40.468 WARN]                                     3
+[  571 2017-10-18 22:02:40.468 WARN]                                   ]
+[  571 2017-10-18 22:02:40.468 WARN]                        }
+[  571 2017-10-18 22:02:40.468 WARN]                      ],
+[  571 2017-10-18 22:02:40.468 WARN]           'cache_result' => 1,
+[  571 2017-10-18 22:02:40.468 WARN]           'after_id' => 'FFFFFFFFFFFFFFFF',
+[  571 2017-10-18 22:02:40.468 WARN]           'fulfill_limit' => 1,
+[  571 2017-10-18 22:02:40.468 WARN]           'limit' => 1
+[  571 2017-10-18 22:02:40.468 WARN]         };
+[  571 2017-10-18 22:02:40.468 WARN] 
+[  571 2017-10-18 22:02:40.471 WARN] My::Comments::GroupMultiPost:V=2;
+[  571 2017-10-18 22:02:40.471 WARN] My::Comments::GroupMultiPost:C=[751];
+[26610 2017-10-18 22:02:40.482 INFO] 014085bb00000000:1: (disturber=774744908, journal=-3040184) RSS: [0 = 68191 - 68191]; VSS: [0 = 294614 - 294614]
+[  571 2017-10-18 22:02:40.492 INFO] 71e67abb00000000:2: (disturber=1701128415, journal=-3860872) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  351 2017-10-18 22:02:40.501 WARN] value -3847549 is out of range for uint32_t at /usr/share/perl5/vendor_perl/MR/Tarantool/Box/Record/Trait/Class.pm line 313.
+[  351 2017-10-18 22:02:40.505 INFO] f53f85bb00000000:1: (disturber=-3847549, journal=-3847549) RSS: [0 = 69199 - 69199]; VSS: [0 = 296220 - 296220]
+[  571 2017-10-18 22:02:40.537 INFO] 72e67abb00000000:2: Get event 72e67abb00000000:2 from queue: type 18
+[  351 2017-10-18 22:02:40.553 INFO] f63f85bb00000000:1: Get event f63f85bb00000000:1 from queue: type 13
+[  351 2017-10-18 22:02:40.553 INFO] f63f85bb00000000:1: Type: 13, meta: ActiveUser=-3847549(vladimir_news), JournalUser=-3847549(vladimir_news), ID=not defined, Parent=12655
+[  571 2017-10-18 22:02:40.555 INFO] 72e67abb00000000:2: (disturber=1701128415, journal=1055234644) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.555 INFO] 73e67abb00000000:2: Get event 73e67abb00000000:2 from queue: type 29
+[  571 2017-10-18 22:02:40.567 INFO] 73e67abb00000000:2: (disturber=189127660, journal=-3080713) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.568 INFO] 74e67abb00000000:2: Get event 74e67abb00000000:2 from queue: type 29
+[26610 2017-10-18 22:02:40.576 INFO] delete events [ fd3f85bb00000000:1 fe3f85bb00000000:1 004085bb00000000:1 ff3f85bb00000000:1 014085bb00000000:1 ]
+[  571 2017-10-18 22:02:40.597 INFO] 74e67abb00000000:2: (disturber=1268857889, journal=-3581016) RSS: [0 = 66418 - 66418]; VSS: [0 = 292753 - 292753]
+[  571 2017-10-18 22:02:40.598 INFO] 70e67abb00000000:2: My::Mras->Check: code=0, signature=No signature for type photo Need_spam_action=1, message_length=0, streamed=1, stream_len=47061, params Age: 22058; Type: 13; Flags: 2; Subject: not bad; Location: unknown; Referer: unknown; Meta: ActiveUser=-3287910(for_men_only1), JournalUser=-3287910(for_men_only1), ID=not defined, Parent=14971; Add_Data: (UniqFileId=2313664004, ParentID=14971, DecrementKey=1701128415, HiddenAlbum=1, EventTime=1508353356), url=10.161.65.18:42500
+[  571 2017-10-18 22:02:40.676 INFO] delete events [ 73e67abb00000000:2 70e67abb00000000:2 71e67abb00000000:2 72e67abb00000000:2 74e67abb00000000:2 ]
+[  571 2017-10-18 22:02:40.690 INFO] Fetched 5 events

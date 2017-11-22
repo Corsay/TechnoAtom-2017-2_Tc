@@ -1,0 +1,26 @@
+#!/usr/bin/env perl
+use warnings;
+use strict;
+use 5.016;
+#=rem
+my @parts;
+
+my $mask = shift @ARGV; #$mask="*.pl";
+$mask = quotemeta($mask);
+#$mask =~ s{([\.\/\)\(\[\]\{\}\^\$\|\+])}{@{[quotemeta($1)]}}g;
+$mask =~ s{\\\*}{\.\*}g;
+$mask =~ s{\\\?}{\.\?}g;
+
+while (my $line = <STDIN>) {
+    chomp $line;
+    if ($line =~qr/$mask/) {
+        open(my $ph, '<', $line) or die $!;
+        while (my $row = <$ph>) {
+            chomp $row;
+            print "$line:$row\n";
+        }
+    }
+}
+
+
+#=cut

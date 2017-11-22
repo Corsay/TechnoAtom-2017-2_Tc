@@ -1,0 +1,31 @@
+#!/usr/bin/env perl
+=rem
+Необходимо написать утилиту, которая будет фильтровать входящий поток по времени, время начала и завершения интервала передаются в параметрах запуска.
+По умолчанию утилита должна находить в строке первую от начала дату в формате `YYYY-MM-DD HH::MM:SS` (`%Y-%m-%d %H:%M:%S`).
+
+Обязательные параметры:
+
+- `-f|--from=X` - время начала интервала (unix timestamp)
+- `-t|--to=X` - время завершения интервала (unix timestamp)
+
+Unix timestamp для произвольной даты вы можете получить при помощи утилиты `date -d`
+
+Необязательные параметры:
+- `--time=FORMAT` - формат времени который нужно искать в файле в формате strptime (по умолчанию `%Y-%m-%d %H:%M:%S`)
+
+Скрипт на вход получает набор строк, из них оставляет только те, в которых находится дата опредлённого формата попадающая в указанный интервал
+
+Пример:
+```
+$ cat data
+aaa sss dd 2017-10-18 11:10:01 sdjkafkjsdhfsdka sadjkhfsl df lkshjdaflkh
+askdjhfkljshad fklajhsdf lakjs  aslkjdfh asdflkjhasd flkjh
+eee ashjfgaskjf ask 2017-10-18 15:15:15 kjdshklsfdhf aslkjfh asflksahf 
+asfdjhsg asdfjkh 2017-10-18 20:20:20 sdfjhskadjfh askljdhf aslkfjdh
+jdsfkjh asdfkjlh asdflkhj alsdf lkjahsdf lkasjhdf
+
+$ cat data | ./bin/tf --from=1508224400 --to=1508342400
+aaa sss dd 2017-10-18 11:10:01 sdjkafkjsdhfsdka sadjkhfsl df lkshjdaflkh
+eee ashjfgaskjf ask 2017-10-18 15:15:15 kjdshklsfdhf aslkjfh asflksahf 
+```
+=cut

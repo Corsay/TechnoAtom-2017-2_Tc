@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+#Зайцев Владислав Сергеевич
+use strict;
+use Getopt::Long;
+
+my @array;
+my $flag = 0;
+my $n;
+
+GetOptions('n|length=i' => \$n);
+
+while(my $string = <STDIN>) { #разделяем STDIN на строки
+  chomp($string); # отсекаем символ \n
+  push(@array, $string);
+}
+
+if(defined $n){
+	if($n >= 0){
+		if ($n > $#array){
+			$n = $#array;
+		}
+		else{
+		$n--;
+		}
+	}
+	else{
+		$n = $#array+$n; 
+		if($n < 0) {
+			$flag = 1;
+			$n = 0;
+		}
+	}
+}	
+else{
+	$n = 9;
+	if ($#array < 10){
+		$n = $#array;
+	}
+}
+if(!$flag){
+	for my $i(0..$n){
+		print $array[$i] . "\n";
+	}
+}

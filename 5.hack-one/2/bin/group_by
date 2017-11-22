@@ -1,0 +1,149 @@
+#!/usr/bin/env perl
+=rem
+Необходимо реализовать программу которая принимает на стандартный ввод текст и обрабатывает его в соответствии с
+заданными опциями командной строки.
+
+Обязательные параметры:
+
+- `-k|--key=X` - Задаёт номер колонки по которой выполняется агрегация (обязательный параметр)
+- `-l|--limit=X` - Для каждого уникального значения из колонки `--key` вывести первые `X` указанных строк
+
+Дополнительно:
+- `--count` - Для каждого ключа вывести количество сколько раз он встречается
+- `--max=X` - Для каждого ключа вывести максимальное значение из столбца `X`
+- `--min=X` - Для каждого ключа вывести минимальное значение из столбца `X`
+- `--sum=X` - Для каждого ключа вывести сумму значения из столбца `X`
+- `--avg=X` - Для каждого ключа вывести среднее значение из столбца `X`
+
+Пример:
+
+```
+$ cat data
+Once    1       2       3       4
+Twice   2       3       4       5
+Twice   3       4       5       6
+
+$ cat data | group_by --key 1 --limit 1
+Once    1       2       3       4
+Twice   2       3       4       5
+
+$ cat data | group_by --key 1 --count --avg=3
+Key   COUNT AVG
+Once  1     2
+Twice 2     3.5
+
+$ cat data | group_by --key 1 --limit 1 --count --max=2 --min=3 --sum=4 --avg=5
+Once    1       2       3       4
+Twice   2       3       4       5
+
+Key   COUNT MAX MIN SUM AVG
+Once  1     1   2   3   4
+Twice 2     3   3   9   5.5
+```
+=cut
+
+
+# ДЕЛАЛ ФЕТИСОВ ВЛАДИМИР
+# Цибисов Д.В.
+
+use strict;
+use warnings;
+use 5.016;
+
+use Getopt::Long;
+#use Getopt::Long::Configure('bundling');
+
+my $key_arg; # +
+my $limit_arg = 0; # +
+my $count_arg = 0;
+my $max_arg = 0;
+my $min_arg = 0;
+my $sum_arg = 0;
+my $avg_arg = 0;
+
+GetOptions (
+	'k|key=i' => \$key_arg,
+	'l|limit=i' => \$limit_arg,
+	'count' => \$count_arg,
+	'max=i' => \$max_arg,
+	'min=i' => \$min_arg,
+	'sum=i' => \$sum_arg,
+	'avg=i' => \$avg_arg,
+);
+
+unless (defined $key_arg) { die "Не задан обязательный параметр 'k'\n"; }
+if ($key_arg < 1) { die "Нумерация начинается с 1\n"; }
+$key_arg--;
+
+my $params = $count_arg + $max_arg + $min_arg + $sum_arg + $avg_arg;
+
+
+my %key_count;
+my %key_max;
+my %key_min;
+my %key_sum;
+my %key_avg;
+my @limits;
+
+
+while (<>) {
+	chomp;
+
+	my @splitted_string = split(" ", $_);
+
+	my $uniq_key = $splitted_string[$key_arg];
+
+	# ========== max ===========
+
+	if (exists $key_max{$uniq_key}) {
+		if ($key_max{$uniq_key} < $splitted_string[$max_arg - 1]) { 
+			$key_max{$uniq_key} = $splitted_string[$max_arg - 1]; }
+	}
+	else { $key_max{$uniq_key} = $splitted_string[$max_arg - 1]; }
+
+	# ========= min ============
+
+	if (exists $key_min{$uniq_key}) {
+		if ($key_min{$uniq_key} > $splitted_string[$min_arg - 1]) {
+			$key_min{$uniq_key} = $splitted_string[$min_arg - 1]; }
+	}
+	else { $key_min{$uniq_key} = $splitted_string[$min_arg - 1]; }
+
+	# ========= sum ============
+
+	if (exists $key_sum{$uniq_key}) { $key_sum{$uniq_key} += $splitted_string[$sum_arg - 1]; }
+	else { $key_sum{$uniq_key} = ($splitted_string[$sum_arg - 1]); }
+
+	# ==========================
+
+	if (exists $key_count{$uniq_key}) {
+		if ($key_count{$uniq_key} < $limit_arg) { push @limits, $_; } }
+	else {
+		$key_count{$uniq_key} = 0;
+		push @limits, $_;
+	}
+	$key_count{$uniq_key}++;
+
+}
+
+if ($limit_arg) { say for @limits; }
+
+if ($params) {
+	say "Key\t".("COUNT\t" x $count_arg).("MAX\t" x ($max_arg > 0)).
+	("MIN\t" x ($min_arg > 0)).("SUM\t" x ($sum_arg > 0)).("AVG" x ($avg_arg > 0));
+
+	foreach (keys %key_count) {
+		my $result_str = "$_\t";
+
+		if ($count_arg) { $result_str .= ($key_count{$_})."\t" }
+		if ($max_arg) { $result_str .= ($key_max{$_})."\t" }
+		if ($min_arg) { $result_str .= ($key_min{$_})."\t" }
+		if ($sum_arg) { $result_str .= ($key_sum{$_})."\t" }
+		if ($avg_arg) {
+			my $average = $key_sum{$_} / $key_count{$_};
+			$result_str .= ($average)."\t";
+		}
+
+		say $result_str;
+	}
+}
