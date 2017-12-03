@@ -1,0 +1,47 @@
+<% IF err %>
+	<center class=""error>
+		<ol>
+			<li>Error:</li>
+			<% FOR e IN err %>
+				<li><% e %></li>
+			<% END %>
+		</ol>
+	</center>
+<% END %>
+
+<h3>New Fast Paste</h3>
+<form class="paste_form" id="pasteform" name="pasteform" method="post" onsubmit="
+  document.getElementById('submit').disable=true; 
+  document.getElementById('submit').value='Posting...';
+">
+	<div class="textarea_paste">
+		<textarea name="textpaste" class="paste_textarea" rows="15" style="overflow: hidden; word-wrap: break-word; resezi: none; width:400px; height: 400px;"></textarea>
+	</div>
+	<div class="content_title">Paste settings</div>
+	<div class="form_frame_left" style="width:400px; min-width:400px;">
+		<!-- expiration field -->
+		<div class="form_frame">		<!-- колонка -->
+			<div class="form_left">Paste Expiration</div>	<!-- строка -->
+			<div class="form_right">
+			<select name="expire">
+				<option value="0">Never</option>
+				<option value="600">10 min</option>
+				<option value="3600">1 hour</option>
+				<option value="86400">1 day</option>
+				<option value="604800">1 week</option>
+				<option value="31536000">365 day</option>
+			</select>
+			</div>
+		</div>
+		<!-- title field -->
+		<div class="form_frame">
+			<div class="form_left">Paste name</div>
+			<div class="form_right"><input type="text" name="title" size="20" maxlength="60" value="" class="post_input"></div>
+		</div>
+		<!-- submit button -->
+		<div class="form_frame">
+			<div class="form_left">&nbsp;</div>
+			<div class="form_right"><input type="submit" name="submit" value="New Fast Paste!" id="submit"></div>
+		</div>
+	</div>
+</form>

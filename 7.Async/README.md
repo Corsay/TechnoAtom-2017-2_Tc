@@ -184,5 +184,10 @@ quit
 Connection closed by foreign host.
 perl@perlworkstation:~/temp/d.tcibisov/Async/wget$ 
 
+netcat -kl 1024
+perl telnet.pm localhost 1024
+perl telnet.pm smtp.yandex.ru 25
+perl telnet.pm localhost 1024 | perl -E 'while (STDIN) {}';
+
 
 

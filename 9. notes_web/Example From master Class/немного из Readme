@@ -1,0 +1,34 @@
+# заходим в mysql под root
+mysql -u root -p 
+password:
+# Создание БД
+# Создание пользователя
+# выдача ему всех прав доступа к этой базе
+create database TC_notes charset utf8;
+create user TC_notes IDENTIFIED BY 'TC_notes';
+GRANT ALL ON TC_notes.* to TC_notes;
+# разлогиниваемся и заходим в созданную БД уже под вновь созданным пользователем
+mysql -u TC_notes -p TC_notes
+password: TC_notes
+
+### создание таблиц в БД
+# paste
+=head2
+  id - уникальный код записи (64 бит число),
+  create_time - время создания (время),
+  expire_time - время жизни (время),
+  create_time_idx - индекс по времени создания (основной параметр для поиска)
+  expire_time_idx - индекс по времени жизни    (для выбрасывания истекщих заметок)
+=cut
+CREATE TABLE paste (
+	id BIGINT PRIMARY KEY NOT NULL,
+	create_time TIMESTAMP NOT NULL,
+	expire_time TIMESTAMP NULL,
+	title VARCHAR(255),
+	index create_time_idx (create_time),
+	index expire_time_idx (expire_time)
+) charset utf8;
+# show create table paste
+
+# конфигурируем через dancer2 -a NameDB каталог для сайта
+# настраиваем конфиг config.yml
