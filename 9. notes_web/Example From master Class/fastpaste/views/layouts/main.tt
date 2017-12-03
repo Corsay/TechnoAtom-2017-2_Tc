@@ -17,7 +17,19 @@
 <body>
 	<div id="page">
 		<div id="sidebar">
-			<ul id="sidebar-items"></ul>
+			<ul id="sidebar-items">
+				<li>
+					<h3>Last Fast Paste</h3>
+					<ul class="links">
+						<% FOR lp IN last_paste %>
+							<li>
+								<a href="/<% lp.id %>"><% lp.title || 'untitled' %></a>
+								<span><% lp.create_time %></span>
+							</li>
+						<% END %>
+					</ul>
+				</li>
+			</ul>
 		</div>
 		<div id="content">
 			<div id="header">

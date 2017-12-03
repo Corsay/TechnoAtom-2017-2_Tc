@@ -16,7 +16,7 @@ sub get_upload_dir {	# получаем каталог с файлами
 sub delete_entry {	# получает на вход $id, удаляем запись из бд
 	my $id = shift;
 	database->do('DELETE FROM paste WHERE id = cast(? as signed)', {}, $id);
-	unlink get_upload_dir . $id;
+	unlink get_upload_dir . $id if (-e get_upload_dir . $id);
 }
 
 get qr{^/([a-f0-9]{16})$} => sub {
@@ -25,9 +25,9 @@ get qr{^/([a-f0-9]{16})$} => sub {
 
 	# ToDo validate params	
 
-	my $sth = database->prepare('SELECT cast(id as unsigned), create_time, unix_timestamp(expire_time), title FROM paste where id = cast(? as signed);');
+	my $sth = database->prepare('SELECT cast(id as unsigned) as id, create_time, unix_timestamp(expire_time) as expire_time, title FROM paste where id = cast(? as signed);');
 	unless ($sth->execute($id)) {	# если select ничего не вернул
-		responce->status(404);	# возвращаем ответ 404 - не найдено
+		response->status(404);	# возвращаем ответ 404 - не найдено
 		return template 'index' => {err => ['Fast paste not found']};	# рендерим основную страницу(не страницу 404), передавая параметром ошибки (для их вывода пользователю)
 	}
 	# если же запрос выполнился, пробуем получить эту запись
@@ -35,19 +35,20 @@ get qr{^/([a-f0-9]{16})$} => sub {
 	# проверяем expire_time (на случай если на момент выборки expire_time истек (и cron не успел подчистить))
 	if ($db_res->{expire_time} and $db_res->{expire_time} < time()) {	# если просрочено, то
 		delete_entry($id);	# удаляем запись
-		responce->status(404);	# возвращаем ответ 404 - не найдено
+		response->status(404);	# возвращаем ответ 404 - не найдено
 		return template 'index' => {err => ['Fast paste expired']};
 	}
 	# читаем контент
 	my $fh;
 	unless (open($fh, '<:utf8', get_upload_dir . $id)) {	# если не удалось открыть, но в базе есть запись, то
-		die 'Internal error '.$!;
-		responce->status(404);	# возвращаем ответ 404 - не найдено
+		delete_entry($id);
+		response->status(404);	# возвращаем ответ 404 - не найдено
 		return template 'index' => {err => ['Fast paste not found']};
 	}
 	my @text = <$fh>;
 	close($fh);
 
+	my $title = encode_entities($db_res->{title}, '<>&"');	# борьба с xss
 	for(@text) {
 		$_ = encode_entities($_, '<>&"');	# борьба с xss
 		# "так как браузер табуляцию и начальные пробелы съест и ничего красивого не выйдет"
@@ -56,7 +57,7 @@ get qr{^/([a-f0-9]{16})$} => sub {
 	}
 	return template 'paste_show.tt' => {
 		id => $id, text => \@text, raw => join('', @text), create_time => $db_res->{create_time}, 
-		expire_time => $db_res->{expire_time}, title => $db_res->{title}
+		expire_time => $db_res->{expire_time}, title => $title
 	};
 };
 
@@ -66,10 +67,24 @@ get '/' => sub {
 
 post '/' => sub {
 	my $text = params->{textpaste};		# текст 
-	my $title = params->{title}||'';	# заголовок(название)
-	my $expire = params->{expire};		# время жизни (0 = бесконечно)
+	my $title = params->{title}||'';	# заголовок(название)			(опционально)
+	my $expire = params->{expire};		# время жизни (0 = бесконечно)	(опционально)
 
-	# ToDo validate params
+	my @err = ();
+	if (!$text) {	# пустой текст -> ошибка
+		push @err, 'Empty text';
+	}
+	if(length($text) > 10240) {	# больше 10кб -> ошибка
+		push @err, 'Text too large';
+	}
+	if ($expire =~ /\D/ or $expire < 0 or $expire > 3600*24*365) {	# проверем expire на наличие гадостей
+		push @err, 'Expare more then 365 days or bad format';
+	}
+	if (@err) {	# если хоть одна ошибка
+		$text = encode_entities($text, '<>&"');	# борьба с xss
+		$title = encode_entities($title, '<>&"');
+		return template 'index' => {text => $text, title => $title, expire => $expire, err => \@err};
+	}
 
 	my $create_time = time();		# время создания (время прихода запроса на сервер)
 	my $expire_time = $expire ? $create_time + $expire : undef;
@@ -79,7 +94,7 @@ post '/' => sub {
 	my $id = '';
 	my $try_count = 10;
 	while (!$id or -f get_upload_dir.$id) {	# если id (undef,'') или существует файл то входим
-		database->do('DELETE FROM paste WHERE id = cast(? as signed);', {}, [$id]) if $id;	# если id не (undef,'')(т.е. добавили в бд успешно, но файл уже существовал),то удаляем сделанную запись
+		database->do('DELETE FROM paste WHERE id = cast(? as signed);', {}, $id) if $id;	# если id не (undef,'')(т.е. добавили в бд успешно, но файл уже существовал),то удаляем сделанную запись
 		unless (--$try_count) {	# если превышен лимит попыток добавления
 			$id = undef;
 			last;
@@ -98,6 +113,21 @@ post '/' => sub {
 	print $fh $text;
 	close($fh);
 	redirect '/' . unpack 'H*', pack 'Q', $id;	# пакуем и делаем redirect
+};
+
+# для отображения боковой менюшки с последними добавленными текстами
+hook before_template_render => sub {
+	my $tokens = shift;	# хеш переменных переданных шаблону перед которым вызывается hook before_template_render
+	# Добавим в него последние 10 добавленных записей
+	my $last_paste = database->selectall_arrayref(
+		'SELECT cast(id as unsigned) as id, create_time, title FROM paste where (expire_time is null or expire_time > current_timestamp) order by create_time desc limit 10;',
+		{ Slice => {} }
+	);
+	for (@$last_paste) {
+		$_->{title} = encode_entities($_->{title}, '<>&"');	# борьба с xss
+		$_->{id} = unpack 'H*', pack 'Q', $_->{id};
+	}
+	$tokens->{last_paste} = $last_paste;
 };
 
 true;
