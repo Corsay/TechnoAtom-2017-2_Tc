@@ -1,0 +1,5 @@
+Database:
+  driver: 'SQLite'
+  dbname: 'users_relation.db'
+  username: ''
+  password: ''

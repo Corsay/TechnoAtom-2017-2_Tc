@@ -1,0 +1,40 @@
+<% IF err %>
+	<center class="error">
+		<ol>
+			<li class="error">Error:</li>
+			<% FOR e IN err %>
+				<li><% e %></li>
+			<% END %>
+		</ol>
+	</center>
+<% END %>
+
+<h3>TCnote Login or Register</h3>
+<form class="note_form" id="noteform" name="noteform" method="post" onsubmit="
+  document.getElementById('submit').disable=true;
+  document.getElementById('submit').value='Loging...';
+">
+	<div class="form_frame_left" style="width:450px; min-width:450px;">
+		<!-- user login field -->
+		<div class="form_frame">
+			<div class="form_left">Login</div>
+			<div class="form_right"><input type="text" name="user_login" size="20" maxlength="15" value="<% user_login %>" placeholder="Логин (до 15 символов)" class="post_input" required></div>
+		</div>
+		<!-- password field -->
+		<div class="form_frame">
+			<div class="form_left">Password</div>
+			<div class="form_right"><input type="password" name="user_password" size="20" maxlength="25" value="" placeholder="Пароль" class="post_input" required></div>
+		</div>
+		<!-- name field -->
+		<div class="form_frame">
+			<div class="form_left">Name field (new user)</div>
+			<div class="form_right"><input type="text" name="user_name" size="20" maxlength="25" value="<% user_name_ins %>" placeholder="Имя (до 25 символов)" class="post_input"></div>
+		</div>
+		<!-- Login\Register button -->
+		<div class="form_frame">
+				<div class="form_left">&nbsp;</div>
+				<div class="form_right"><input type="submit" name="submit" value="Login\Reg!" id="submit"></div>
+		</div>
+		<input type="hidden" name="csrf_token" value="<% csrf_token %>"/>
+	</div>
+</form>

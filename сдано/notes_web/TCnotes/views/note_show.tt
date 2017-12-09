@@ -1,0 +1,14 @@
+<h3>Note "<% title || 'untitled' %>"</h3>
+<div class="show_note">
+	<ol>
+		<% FOR t IN text %>
+			<li class="li_note">
+				<div class="single_line"><% t %></div>
+			</li>
+		<% END %>
+	</ol>
+</div>
+<h3>Raw data</h3>
+<div class="textarea_border">
+	<textarea name="textnote" class="note_textarea" rows="15" style="overflow: hidden; word-wrap: break-word; resezi: none; width:400px; height: 400px;"><% raw %></textarea>
+</div>

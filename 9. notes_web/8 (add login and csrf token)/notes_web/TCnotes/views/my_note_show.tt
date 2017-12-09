@@ -1,0 +1,15 @@
+<h3>My Notes</h3>
+<div class="show_note">
+	<ul id="sidebar-items">
+		<li>
+			<ul class="links">
+				<% FOR mn IN MyNotes %>
+					<li>
+						<a href="/<% mn.id %>"><% mn.title || 'untitled' %></a>
+						<span><% mn.create_time %></span>
+					</li>
+				<% END %>
+			</ul>
+		</li>
+	</ul>
+</div>

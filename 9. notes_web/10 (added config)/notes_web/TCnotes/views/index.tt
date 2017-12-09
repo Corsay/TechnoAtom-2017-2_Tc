@@ -1,0 +1,52 @@
+<% IF err %>
+	<center class="error">
+		<ol>
+			<li class="error">Error:</li>
+			<% FOR e IN err %>
+				<li><% e %></li>
+			<% END %>
+		</ol>
+	</center>
+<% END %>
+
+<h3>New Note</h3>
+<form class="note_form" id="noteform" name="noteform" method="post" onsubmit="
+  document.getElementById('submit').disable=true;
+  document.getElementById('submit').value='Posting...';
+">
+	<div class="textarea_note">
+		<textarea name="textnote" class="note_textarea" rows="15" style="overflow: hidden; word-wrap: break-word; resezi: none; width:400px; height: 400px;"><% text %></textarea>
+	</div>
+	<div class="content_title">Note settings</div>
+	<div class="form_frame_left" style="width:450px; min-width:450px;">
+		<!-- expiration field -->
+		<div class="form_frame">
+			<div class="form_left">Note Expiration</div>
+			<div class="form_right">
+			<select name="expire">
+				<% FOR e IN ExpireMas %>
+					<option value="<% e.value %>" <% IF expire==e.value %>selected="selected"<% END %>><% e.text %></option>
+				<% END %>
+			</select>
+			</div>
+		</div>
+		<!-- title field -->
+		<div class="form_frame">
+			<div class="form_left">Note name</div>
+			<div class="form_right"><input type="text" name="title" size="20" maxlength="60" value="<% title %>" class="post_input"></div>
+		</div>
+		<!-- accepted users field -->
+		<div class="form_frame">
+			<div class="form_left">Note accepted users</div>
+			<div class="form_right">
+				<textarea name="accepted_users"><% accepted_users %></textarea>
+			</div>
+		</div>
+		<!-- submit button -->
+		<div class="form_frame">
+			<div class="form_left">&nbsp;</div>
+			<div class="form_right"><input type="submit" name="submit" value="New Note!" id="submit"></div>
+		</div>
+		<input type="hidden" name="csrf_token" value="<% csrf_token %>"/>
+	</div>
+</form>

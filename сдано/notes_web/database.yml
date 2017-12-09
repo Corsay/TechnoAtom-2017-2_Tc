@@ -1,0 +1,5 @@
+Database:
+  driver: 'mysql'
+  dbname: 'TCnotes'
+  username: 'root'
+  password: ''

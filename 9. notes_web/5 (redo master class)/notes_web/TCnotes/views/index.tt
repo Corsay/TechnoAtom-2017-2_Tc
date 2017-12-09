@@ -1,0 +1,47 @@
+<% IF err %>
+	<center class="error">
+		<ol>
+			<li class="error">Error:</li>
+			<% FOR e IN err %>
+				<li><% e %></li>
+			<% END %>
+		</ol>
+	</center>
+<% END %>
+
+<h3>New Note</h3>
+<form class="note_form" id="noteform" name="noteform" method="post" onsubmit="
+  document.getElementById('submit').disable=true;
+  document.getElementById('submit').value='Posting...';
+">
+	<div class="textarea_note">
+		<textarea name="textnote" class="note_textarea" rows="15" style="overflow: hidden; word-wrap: break-word; resezi: none; width:400px; height: 400px;"><% text %></textarea>
+	</div>
+	<div class="content_title">Note settings</div>
+	<div class="form_frame_left" style="width:400px; min-width:400px;">
+		<!-- expiration field -->
+		<div class="form_frame">		<!-- колонка -->
+			<div class="form_left">Note Expiration</div>	<!-- строка -->
+			<div class="form_right">
+			<select name="expire">
+				<option value="0" <% IF expire==0 %>selected="selected"<% END %>>Never</option>
+				<option value="600" <% IF expire==600 %>selected="selected"<% END %>>10 min</option>
+				<option value="3600" <% IF expire==3600 %>selected="selected"<% END %>>1 hour</option>
+				<option value="86400" <% IF expire==86400 %>selected="selected"<% END %>>1 day</option>
+				<option value="604800" <% IF expire==604800 %>selected="selected"<% END %>>1 week</option>
+				<option value="31536000" <% IF expire==31536000 %>selected="selected"<% END %>>365 day</option>
+			</select>
+			</div>
+		</div>
+		<!-- title field -->
+		<div class="form_frame">
+			<div class="form_left">Note name</div>
+			<div class="form_right"><input type="text" name="title" size="20" maxlength="60" value="<% title %>" class="post_input"></div>
+		</div>
+		<!-- submit button -->
+		<div class="form_frame">
+			<div class="form_left">&nbsp;</div>
+			<div class="form_right"><input type="submit" name="submit" value="New Note!" id="submit"></div>
+		</div>
+	</div>
+</form>
