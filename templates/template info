@@ -1,0 +1,18 @@
+Не забывая о важном "Шебанг"
+===========================
+#!/usr/bin/perl
+#!/usr/bin/env perl
+
+Модуль
+======
+module-starter --module L::Exam --author Dmitriy --email Dmitriy@Tcibisov.ru
+
+GetOpt::Long и Pod21Usage
+=========================
+perl GetOpt_Pod21Usage.pm --user 1 --user 2 -? --man --help
+
+DDP и Data::Dumper и чуток autoflush
+====================================
+perl DDP_Dumper.pm
+-> не забывать убирать в итоге DDP и Data::Dumper из Release (коротко там где он в итоге не нужен!)
+-> ну и autoflush если это важно как и прочие(SIG и т.д.) лучше делать локально
